@@ -33,7 +33,7 @@ if(strpos($message, "/start") === 0){
 if(!isBanned($userId) && !isMuted($userId)){
 
   if($userId == $config['adminID']){
-    $messagesec = "<b>Type /admin to know admin commands</b>";
+    $messagesec = "<b>Usa /admin para conocer los comandos disponibles♻️</b>";
   }
 
     addUser($userId);
@@ -41,17 +41,14 @@ if(!isBanned($userId) && !isMuted($userId)){
         'chat_id'=>$chat_id,
         'text'=>"<b>Hello @$username,
 
-Type /cmds to know all my commands!</b>
+Type /cmds Si Quiere Conocer Los Comandos Usa /cmds</b>
 
 $messagesec",
 	'parse_mode'=>'html',
 	'reply_to_message_id'=> $message_id,
     'reply_markup'=>json_encode(['inline_keyboard' => [
         [
-          ['text' => "💠 Created By 💠", 'url' => "t.me/ninjanaveen"]
-        ],
-        [
-          ['text' => "💎 Source Code 💎", 'url' => "t.me/IndianBotsChat"]
+          ['text' => "🛠 SOPORTE🛠 ", 'url' => "t.me/raistarsoporte"]
         ],
       ], 'resize_keyboard' => true])
         
@@ -81,7 +78,7 @@ if(strpos($message, "/cmds") === 0 || strpos($message, "!cmds") === 0){
     bot('editMessageText',[
     'chat_id'=>$callbackchatid,
     'message_id'=>$callbackmessageid,
-    'text'=>"<b>Which commands would you like to check?</b>",
+    'text'=>"<b>👀Veo Que Quieres Conocer Los Comandos Pulsa Cualquier Boton</b>",
     'parse_mode'=>'html',
     'reply_markup'=>json_encode(['inline_keyboard'=>[
     [['text'=>"💳 CC Checker Gates",'callback_data'=>"checkergates"]],[['text'=>"🛠 Other Commands",'callback_data'=>"othercmds"]],
@@ -102,7 +99,7 @@ if(strpos($message, "/cmds") === 0 || strpos($message, "!cmds") === 0){
 <b>/apikey sk_live_xxx - Add SK Key for /schk gate</b>
 <b>/myapikey | !myapikey - View the added SK Key for /schk gate</b>
 
-<b>ϟ Join <a href='t.me/IndianBots'>IndianBots</a></b>",
+<b>ϟ Bot by: <a href='t.me/MTXVM1'>ϟ𝙈𝙏𝙓ϟ</a></b>",
     'parse_mode'=>'html',
     'disable_web_page_preview'=>true,
     'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -124,7 +121,7 @@ if(strpos($message, "/cmds") === 0 || strpos($message, "!cmds") === 0){
 <b>/bin | !bin</b> - Bin Lookup
 <b>/iban | !iban</b> - IBAN Checker
   
-  <b>ϟ Join <a href='t.me/IndianBots'>IndianBots</a></b>",
+  <b>ϟ Bot by <a href='t.me/MTXVM1'>ϟ𝙈𝙏𝙓ϟ</a></b>",
     'parse_mode'=>'html',
     'disable_web_page_preview'=>true,
     'reply_markup'=>json_encode(['inline_keyboard'=>[
